@@ -3,28 +3,69 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.scss" />
+		<link rel="stylesheet" href="css/style.scss" />
 		<title>Document</title>
 	</head>
 	<body>
 		<header>
 			<div class="container">
 				<nav class="top-menu">
+					<div class="drop-downs">
+						<div class="category">
+							Для мужчин <span class="drop-down__span"></span>
+						</div>
+						<div class="category">
+							Для женщин <span class="drop-down__span"></span>
+						</div>
+						<div class="category">
+							Для детей<span class="drop-down__span"></span>
+						</div>
+					</div>
 					<div class="logo">
 						<img src="img/logo.svg" alt="logo" />
 						<div class="logo__text">the loop</div>
 					</div>
-					<div class="drop-downs"></div>
-					<div class="feature-menus"></div>
-					<div class="cart"></div>
+					<div class="feature-menus">
+						<div class="category">Оплата</div>
+						<div class="category">Доставка</div>
+					</div>
+					<div class="cart">
+						<div class="cart__pic">
+							<img src="img/shopping-basket-button.svg" alt="" />
+						</div>
+						<div class="cart__count">5</div>
+					</div>
 				</nav>
+				<div class="advantageous-offer">
+					<div class="offer__text">
+						<h3>Зимняя распродажа</h3>
+						<h1>СКИДКИ ДО 90%</h1>
+						<button class="see-models"></button>
+					</div>
+					<div class="offer__picture">
+						<img
+							src="img/running_shoes.png"
+							alt="running_shoes"
+							class="offer__model"
+						/>
+						<h2 class="red-prise">
+							<span class="crossed-out">9 900 ₽</span>1 900 ₽
+						</h2>
+					</div>
+				</div>
 			</div>
-			<div class="advantageous-offer"></div>
+
 			<div class="additional-advantage"></div>
 		</header>
 		<section class="main"></section>
 		<section class="new"></section>
 		<section class="discounts"></section>
-		<footer></footer>
+		<footer>
+			<i class="fab fa-vk"></i>
+		</footer>
+		<script
+			src="https://kit.fontawesome.com/08648c061d.js"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
