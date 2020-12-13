@@ -11,6 +11,7 @@ header {
 .top-menu {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 20rem;
 }
 .drop-downs,
 .feature-menus {
@@ -19,7 +20,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 1.75rem;
 }
 .category {
 	display: flex;
@@ -29,10 +30,10 @@ header {
 	display: block;
 	width: 0;
 	height: 0;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-top: 5px solid #000;
-	margin-left: 5px;
+	border-left: 0.625rem solid transparent;
+	border-right: 0.625rem solid transparent;
+	border-top: 0.625rem solid #000;
+	margin-left: 0.625rem;
 }
 .logo {
 	flex: 0 1 auto;
@@ -44,14 +45,14 @@ header {
 	text-transform: uppercase;
 	margin-left: 1rem;
 	font-weight: 600;
-	font-size: 24px;
+	font-size: 3rem;
 }
 .feature-menus {
 	flex: 1 2 auto;
 	justify-content: space-around;
 }
 .cart {
-	flex: 1 1 auto;
+	flex: 0 1 auto;
 	display: flex;
 	align-items: center;
 	margin-left: 1rem;
@@ -79,19 +80,52 @@ header {
 	border-right: 8px solid #d7b399;
 }
 .advantageous-offer {
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	justify-content: center;
+}
+.offer__text {
+	flex: 1 1 50%;
+	text-align: left;
+	h1 {
+		font-size: 6.875rem;
+		font-weight: 700;
+	}
+	h3 {
+		font-size: 3.75rem;
+		font-weight: 400;
+	}
+}
+.offer__picture {
+	position: relative;
+	flex: 1 1 50%;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	img {
+		width: 100%;
+		object-fit: contain;
+	}
+	h2 {
+		margin: 0.5rem auto;
+	}
+}
+.offer__picture__caption {
+	margin-top: 3.5rem;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 .red-prise {
 	font-weight: 600;
-	font-size: 42px;
+	font-size: 5.25rem;
 	color: #d84033;
 }
 .crossed-out {
 	font-weight: 600;
-	font-size: 24px;
+	font-size: 3rem;
 	color: #000;
 	position: relative;
 }

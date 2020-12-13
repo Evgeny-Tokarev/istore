@@ -1,0 +1,13 @@
+@media screen and (max-width: 1600px) {
+	html {
+		font-size: 7px;
+	}
+	.container {
+		width: 65%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.container {
+		width: 90%;
+	}
+}
