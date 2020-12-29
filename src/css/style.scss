@@ -187,9 +187,19 @@ header {
 .collections {
 	display: flex;
 	width: 100%;
-	background-color: $cream;
 	justify-content: center;
+}
+.collection-wrapper {
 	padding: 7rem 0 0 0;
+	flex: 0 0 50%;
+	display: flex;
+}
+.col-man {
+	background-color: $cream;
+	justify-content: flex-end;
+}
+.col-woman {
+	background-color: #f4f4f4;
 }
 .collection {
 	display: flex;
@@ -207,4 +217,43 @@ header {
 		font-size: 2rem;
 		font-weight: 300;
 	}
+}
+.arrow-button {
+	width: 80px;
+	height: 30px;
+	background-color: $accent;
+}
+.clothes-items {
+	display: flex;
+	flex-wrap: wrap;
+}
+.clothes-item {
+	position: relative;
+	flex: 1 1 25%;
+}
+.clothes-item__picture {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.clothes-item__description {
+	position: absolute;
+	bottom: 24px;
+	left: 30px;
+	font-weight: 300;
+	font-size: 2.625rem;
+}
+// ________________________________
+
+.new {
+	text-align: center;
+	padding: 15rem;
+	h2 {
+		text-transform: uppercase;
+		font-size: 4.5rem;
+		font-weight: 700;
+	}
+}
+.models {
+	display: flex;
 }
