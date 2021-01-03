@@ -37,6 +37,35 @@ header {
 	letter-spacing: 2px;
 	align-items: center;
 }
+.logopic {
+	flex: 0 0 auto;
+	margin: 0 3rem 0 0;
+	position: relative;
+	width: $wid;
+	height: $wid;
+	background-color: $accent;
+	box-shadow: $wid $wid 0 0 $accent, $wid (-$wid) 0 0 $accent,
+		(-$wid) $wid 0 0 $accent, (-$wid) (-$wid) 0 0 $accent;
+	animation: logorotation 3s linear infinite normal;
+	&:before {
+		position: absolute;
+		content: "";
+		width: $wid;
+		height: $wid;
+		background-color: #fff;
+		box-shadow: $wid2 $wid2 0 0 $accent, $wid2 (-$wid2) 0 0 $accent,
+			(-$wid2) $wid2 0 0 $accent, (-$wid2) (-$wid2) 0 0 $accent;
+	}
+}
+@keyframes logorotation {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 .logo__text {
 	text-transform: uppercase;
 	margin-left: 1rem;
@@ -138,14 +167,14 @@ header {
 	font-size: 3rem;
 	color: #000;
 	position: relative;
-}
-.crossed-out:before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	height: 2px;
-	background-color: #000;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		height: 2px;
+		background-color: #000;
+	}
 }
 .swiper-container {
 	margin-bottom: 5rem;
@@ -239,30 +268,29 @@ header {
 .coll-man {
 	background-color: $cream;
 	background-image: url(../img/male.png);
-}
-.coll-man:before {
-	content: "";
-	position: absolute;
-	left: -100%;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: $cream;
+	&:before {
+		content: "";
+		position: absolute;
+		left: -100%;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $cream;
+	}
 }
 .coll-woman {
 	background-color: #f4f4f4;
 	background-image: url(../img/female.png);
+	&:after {
+		content: "";
+		position: absolute;
+		right: -100%;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #f4f4f4;
+	}
 }
-.coll-woman:after {
-	content: "";
-	position: absolute;
-	right: -100%;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #f4f4f4;
-}
-
 .collection__description {
 	margin: 0 0 0 3rem;
 }
@@ -271,6 +299,7 @@ header {
 	height: 30px;
 	background-color: $accent;
 	margin: 1rem 0 0 0;
+	color: #fff;
 }
 .clothes-items {
 	display: flex;
@@ -296,13 +325,166 @@ header {
 
 .new {
 	text-align: center;
-	padding: 15rem;
+	padding-bottom: 19rem;
 	h2 {
 		text-transform: uppercase;
 		font-size: 4.5rem;
 		font-weight: 700;
+		padding: 18.75rem 0 12.5rem 0;
+		margin: 0;
 	}
 }
 .models {
 	display: flex;
+	justify-content: space-between;
+	padding-bottom: 12rem;
+}
+.model {
+	position: relative;
+	flex: 0 0 24%;
+	display: flex;
+	flex-direction: column;
+
+	padding-top: 3rem;
+
+	&:before,
+	&:after {
+		content: "";
+		width: 100%;
+		height: 25px;
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	&:before {
+		background-image: url(../img/top-border.svg);
+		top: 0;
+	}
+	&:after {
+		background-image: url(../img/bottom-border.svg);
+		bottom: 0;
+	}
+	.model__img {
+		// img {
+		// 	object-fit: contain;
+		// }
+	}
+	.model__name {
+		padding: 2rem 0 0 0;
+		font-size: 1.75rem;
+		font-weight: 600;
+	}
+	.model__price {
+		font-size: 2.25rem;
+		font-weight: 700;
+		color: $accent;
+		margin-top: 0;
+	}
+}
+.big-button {
+	width: 220px;
+	height: 55px;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 400;
+	span {
+		margin-right: 0.3rem;
+	}
+}
+
+// ___________________________________
+
+.discounts {
+	.get-discount {
+		background-color: #000;
+		padding: 6rem 0;
+	}
+
+	.discounts__inner {
+		display: flex;
+		margin: 0 auto;
+		align-items: center;
+		justify-content: space-between;
+		h2 {
+			color: #fff;
+			font-size: 3.75rem;
+			font-weight: 700;
+		}
+		form {
+			width: 255px;
+			height: 40px;
+			background-color: #fff;
+			margin-left: 4rem;
+			color: #000;
+			label {
+				font-size: 1.5rem;
+				font-weight: 300;
+				color: #8d8d8d;
+				line-height: 40px;
+				margin-left: 2rem;
+			}
+		}
+		.text-button {
+			margin: 0;
+			width: 185px;
+			height: 40px;
+			font-size: 1.75rem;
+			font-weight: medium;
+		}
+	}
+}
+.discounts-models {
+}
+
+// __________________________________________________________
+
+footer {
+	width: 100%;
+	background-color: #000;
+	padding: 9rem 0;
+	& * {
+		color: #fff;
+	}
+	.footer-container {
+		display: flex;
+		justify-content: space-between;
+		.footer-logo {
+			flex: 0 0 21%;
+			margin-right: 15rem;
+			p {
+				margin-top: 4rem;
+				font-size: 1.75rem;
+				font-weight: 400;
+				line-height: 2.75rem;
+			}
+		}
+		.footer-menu {
+			h3 {
+				margin-top: 0;
+				text-transform: uppercase;
+				font-size: 1.25rem;
+				font-weight: 700;
+				padding-bottom: 1rem;
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					list-style-type: none;
+					padding: 1rem 0;
+					a {
+						text-decoration: none;
+						font-size: 1.75rem;
+						font-weight: 400;
+
+						color: #cbcfd4;
+					}
+					i {
+						margin-right: 1rem;
+						color: $accent;
+					}
+				}
+			}
+		}
+	}
 }
